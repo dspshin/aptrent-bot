@@ -41,7 +41,7 @@ def howmuch(loc_param, date_param, filter_param):
                 office[tuples[0]] = tuples[1].strip()
                 #print "\t", tuples[0], tuples[1]
             wolse=', 월세:'+office['월세금액']+'만원'
-            row += office['년']+'/'+office['월']+'/'+office['일']+', '+office['법정동']+' '+office['지번']+', '+office['아파트']+' '+office['층']+'F, '+office['전용면적']+'m², 전세:'+office['보증금액']+'만원'+wolse+'\n'
+            row = office['년']+'/'+office['월']+'/'+office['일']+', '+office['법정동']+' '+office['지번']+', '+office['아파트']+' '+office['층']+'F, '+office['전용면적']+'m², 전세:'+office['보증금액']+'만원'+wolse+'\n'
         except:
             print str(datetime.now()).split('.')[0]
             traceback.print_exc(file=sys.stdout)
