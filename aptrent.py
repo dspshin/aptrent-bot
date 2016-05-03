@@ -145,7 +145,7 @@ def noti(command, subparam, user):
         printed = False
         c.execute('SELECT * from user')
         for data in c.fetchall():
-            row = 'id:'+str(data[0])+', command:'+data[2]+'\n'
+            row = 'id:'+str(data[0])+',user:'+data[1]+',command:'+data[2]+'\n'
             if len(row+res)>MAX_MSG_LENGTH:
                 sendMessage(user, res)
                 res=row
